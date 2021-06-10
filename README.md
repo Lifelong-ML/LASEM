@@ -30,8 +30,6 @@ Instead of designing new way of knowledge transfer between tasks, LASEM searches
     - We rescaled range of image value to [-0.5, 0.5].
 
 ## Proposed Model
-- Hybrid DF-CNN model (LL_hybrid_DFCNN_minibatch model in the code)
-
 - LASEM (Lifelong Architecture Search via EM) applied to hard-parameter sharing, tensor factorization and DF-CNN model (models in the code cnn_lasem_model.py)
 
 
