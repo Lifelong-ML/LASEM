@@ -1,5 +1,5 @@
-# Sharing Less is More: Lifelong Learning in Deep Networks with Selective Layer Transfer
-This code repository is for deep lifelong learning paper [LASEM at ICML 2021]().
+# Lifelong Architecture Search via Expectation Maximization (LASEM)
+This is the code repository for the paper "Sharing Less is More: Lifelong Learning in Deep Networks with Selective Layer Transfer" that appeared in ICML 2021.  It includes the implementation of LASEM for deep lifelong learning along with the experimental code.
 
 Instead of designing new way of knowledge transfer between tasks, LASEM searches the optimal network structure (task-specific or knowledge-transfer at each layer) for the lifelong learning due to the empirical observation that layers to be shared is as critical as knowledge-transfer architecture for better performance. LASEM incorporated EM algorithm with lifelong learning architectures to figure out the optimal layers to be shared between tasks as well as optimal weights of the networks simultaneously. In this implementation, we used hard-parameter sharing, tensor-factorization and DF-CNN as base lifelong learner to apply LASEM.
 
