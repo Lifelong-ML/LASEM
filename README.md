@@ -126,6 +126,5 @@ If you use LASEM or build upon it, please cite the following paper:
 
 ## Citations
 ### LASEM / ICML 2021
-```
-Coming Soon!
-```
+
+> Seungwon Lee, Sima Behpour, and Eric Eaton. (2021). Sharing Less is More: Lifelong Learning in Deep Networks with Selective Layer Transfer. In Proceedings of the International Conference on Machine Learning (ICML).
