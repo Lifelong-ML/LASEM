@@ -152,12 +152,6 @@ def main():
             train_hyperpara['task_order'] = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         elif args.task_order_type == 2:
             train_hyperpara['task_order'] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-        train_hyperpara['patience'] = 5
-        train_hyperpara['num_run_per_model'] = 2
-
-
         train_hyperpara['learning_step_max'] = len(train_hyperpara['task_order']) * train_hyperpara['patience']
 
         train_data, validation_data, test_data = cifar100_data(data_file_name, data_hyperpara['num_train_data'], data_hyperpara['num_valid_data'], data_hyperpara['num_test_data'], data_hyperpara['num_train_group'], data_hyperpara['num_tasks'], multiclass=data_hyperpara['multi_class_label'])
@@ -183,16 +177,6 @@ def main():
             train_hyperpara['task_order'] = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         elif args.task_order_type == 2:
             train_hyperpara['task_order'] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-
-        train_hyperpara['patience'] = 5
-        train_hyperpara['num_run_per_model'] = 2
-
-
-
-
-
         train_hyperpara['learning_step_max'] = len(train_hyperpara['task_order']) * train_hyperpara['patience']
 
         train_data, validation_data, test_data = officehome_data(data_file_name, data_hyperpara['num_train_data'], data_hyperpara['num_valid_data'], data_hyperpara['num_test_data'], data_hyperpara['num_train_group'], data_hyperpara['image_dimension'])
@@ -231,15 +215,6 @@ def main():
         train_hyperpara['task_order'] = list(range(data_hyperpara['num_tasks']))
         if args.task_order_type > 0:
             raise ValueError("Not specified the sequence of sub-tasks!")
-
-
-
-        train_hyperpara['patience'] = 5
-        train_hyperpara['num_run_per_model'] = 2
-
-
-
-
         train_hyperpara['learning_step_max'] = len(train_hyperpara['task_order']) * train_hyperpara['patience']
 
         categorized_train_data, categorized_test_data, experiments_design = stl10_data(experiment_file_base_name=data_file_name, valid_data_ratio_to_whole=float(data_hyperpara['validation_data_ratio'])/100.0, num_train_group=data_hyperpara['num_train_group'], num_tasks=data_hyperpara['num_tasks'], data_percent=float(data_hyperpara['data_percent'])/100.0, num_classes_per_task=data_hyperpara['num_classes'], allowNoise=data_hyperpara['add_noise'], allowChannelSwap=data_hyperpara['swap_channels'])
